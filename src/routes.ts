@@ -5,6 +5,10 @@ import { SubmitFeedbackService } from './services/submitFeedbackService';
 
 export const routes = express.Router();
 
+routes.get('/test', (req, res) => {
+  return res.send("TESTE");
+});
+
 routes.post('/feedbacks', async (req, res) => {
   const { type, comment, screenshot } = req.body;
 
